@@ -10,9 +10,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # return "<h1>Rizal Mujahiddan Ganteng</h1>"
-    # return '<h1>'+app.root_path+'</h1>'
     return render_template('Analisis_data.html')
+
+@app.route('/assets/<name>')
+def button_grafik(name):
+    return render_template('assets/'+name)
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
