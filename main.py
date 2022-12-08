@@ -12,7 +12,7 @@ app = Flask(__name__)
 def home():
     # return "<h1>Rizal Mujahiddan Ganteng</h1>"
     # return '<h1>'+app.root_path+'</h1>'
-    return render_template('index.html')
+    return render_template('Analisis_data.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
